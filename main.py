@@ -1,5 +1,4 @@
 from datetime import datetime
-import calendar
 
 DIGITS = {
     '0':[
@@ -113,9 +112,9 @@ def print_date_as_display(day, month, year):
 
 def main():
     try:
-        day = int(input('день рождения'))
-        month = int(input('месяц рождения'))
-        year = int(input('год рождения'))
+        day = int(input('день рождения: '))
+        month = int(input('месяц рождения: '))
+        year = int(input('год рождения: '))
 
         try:
             datetime(year,month,day)
@@ -127,7 +126,7 @@ def main():
         if weekday:
             print(f"\n день недели: {weekday}")
         else:
-            print("\n error")
+            print("\n ошибка")
             return
         
         if is_leap_year(year):
@@ -145,4 +144,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
